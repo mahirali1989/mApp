@@ -1,9 +1,12 @@
 <div>
-  <p>
-    servers component works!
-  </p>
+  <p>servers component works!</p>
 
-  <button [disabled] = "allowNewServer">Add Server</button>
+  <!--<input type="text" class="form-control" (input) = "onUpdateServer($event)"/> --> 
+  <input type="text" class="form-control" [(ngModel)] = "serverInput"/>
+  {{serverInput}} <br>
+  <button class="btn btn-primary" (click) ="onCreateServer()" [disabled] = "allowNewServer">Add Server</button>
+  <hr>
+  <h3 *ngIf = serveCreate>{{serverStatus}}</h3>
 </div>
 
 
