@@ -6,12 +6,16 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
+import { CreateComponent } from './create/create.component';
+import { NewComponent } from './new/new.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
-    ServersComponent    
+    ServersComponent,
+    CreateComponent,
+    NewComponent
   ],
   imports: [
     BrowserModule,
