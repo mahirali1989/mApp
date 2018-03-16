@@ -10,6 +10,7 @@ export class ServersComponent implements OnInit {
   serverStatus= 'Server is offline';
   serverInput = 'TestServer';
   serveCreate= false;
+  servers = ['Test Server', 'Test Server 2'];
   constructor() { 
     setTimeout( () => {
       this.allowNewServer = false;
@@ -18,6 +19,7 @@ export class ServersComponent implements OnInit {
   onCreateServer () {
     this.serveCreate= true;
     this.serverStatus ='Server is online,'+ 'name of the server is:' +this.serverInput;
+    this.servers.push(this.serverInput);
   }
   onUpdateServer (event: Event) {
     console.log(event);

@@ -7,6 +7,9 @@
   <button class="btn btn-primary" (click) ="onCreateServer()" [disabled] = "allowNewServer">Add Server</button>
   <hr>
   <h3 *ngIf = serveCreate>{{serverStatus}}</h3>
+
+  <app-server *ngFor = "let server of servers"></app-server>  
+  
 </div>
 
 

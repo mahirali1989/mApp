@@ -1,1 +1,5 @@
-<h3 [ngStyle] = "{backgroundColor:getColor()}"> This is Server Component having serverID:{{serverID}} and status: {{getServerStatus()}}</h3>
+<h3 
+[ngStyle] = "{backgroundColor:getColor()}" 
+[ngClass] = "{online: serverStatus === 'online', offline:serverStatus === 'offline'}"> 
+This is Server Component having serverID:{{serverID}} and status: {{getServerStatus()}}
+</h3>
